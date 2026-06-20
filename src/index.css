@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base variables */
+:root{
+  --bg: #FAFBFB;
+  --surface: #F6F7F8;
+  --charcoal: #0F1724;
+  --muted: #6B7280;
+  --accent: #4F8BFF;
+  --accent-600: #3F75E6;
+}
+
+html {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  line-height: 1.45;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  color: var(--charcoal);
+  background-color: var(--bg);
+}
+
+/* Heading scale using Poppins for headings */
+h1, .h1 { font-family: Poppins, Inter, sans-serif; font-weight: 700; font-size: 2.25rem; line-height: 1.05; letter-spacing: -0.01em; }
+h2, .h2 { font-family: Poppins, Inter, sans-serif; font-weight: 600; font-size: 1.5rem; line-height: 1.12; }
+h3, .h3 { font-family: Poppins, Inter, sans-serif; font-weight: 600; font-size: 1.125rem; }
+p, li { color: var(--charcoal); }
+
+/* Accessible focus */
+:focus {
+  outline: 3px solid rgba(79,139,255,0.18);
+  outline-offset: 3px;
+}
+
+/* Make buttons have consistent accessible focus ring */
+button:focus, a:focus {
+  box-shadow: 0 0 0 4px rgba(79,139,255,0.12);
+  border-radius: 8px;
+}
+
+/* Prevent image layout shifts */
+img { display: block; max-width: 100%; height: auto; }
+
+/* Helper */
+.text-muted { color: var(--muted); }
+
+/* Small utilities for headings in Tailwind components */
+@layer components {
+  .lead { font-size: 1.0625rem; color: var(--muted); }
+}
