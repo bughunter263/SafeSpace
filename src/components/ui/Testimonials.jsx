@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const testimonials = [
@@ -8,8 +8,8 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
+  const [index, setIndex] = React.useState(0);
+  React.useEffect(() => {
     const id = setInterval(() => setIndex(i => (i + 1) % testimonials.length), 6000);
     return () => clearInterval(id);
   }, []);
